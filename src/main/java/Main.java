@@ -33,7 +33,7 @@ public class Main {
                            .toArray();
 
 
-        int[] output = new Main().handle(numbers, target);
+        int[] output = new Main().handle(nums, target);
         System.out.println(Arrays.toString(output));
     }
 

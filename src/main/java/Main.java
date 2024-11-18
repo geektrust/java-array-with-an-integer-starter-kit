@@ -14,9 +14,6 @@ public class Main {
      * *********************************************
      */
     public static void main(String[] args) {
-        /*
-         * Format of the 'args' array: [`"[10, 20, 30, 40, 50]", "90"`]
-         */
         for (String arg : args) {
             processArgs(arg);
         }
@@ -25,13 +22,16 @@ public class Main {
     /*
      * This method parses each input and assigns it to different variables.
      * The value of the function parameter "input" will be in the format 
-     * "[10, 20, 30, 40, 50], 90".
+    * "2, 7, 11, 15 | 9".
      */
     private static void processArgs(String input) {
-        String[] inputParts = input.replaceAll("\"", "").split(", ");
-        String[] arrayString = inputParts[0].replaceAll("[\\[\\]]", "").split(", ");
-        int[] numbers = Arrays.stream(arrayString).mapToInt(Integer::parseInt).toArray();
-        int target = Integer.parseInt(inputParts[1]);
+        String[] parts = input.split(" \\| ");
+        String[] numStrs = parts[0].split(", ");
+        int target = Integer.parseInt(parts[1]);
+        int[] nums = Arrays.stream(numStrs)
+                           .mapToInt(Integer::parseInt)
+                           .toArray();
+
 
         int[] output = new Main().handle(numbers, target);
         System.out.println(Arrays.toString(output));

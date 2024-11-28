@@ -27,7 +27,7 @@
     <javac debug="true" srcdir="${src}" destdir="${build}" includeantruntime="false" />
   </target>
 
-  <target name="compile-test" depends="init"
+  <target name="compile-test" depends="init,compile"
     description="compile the test source">
     <!-- Compile the Java test code from ${src} into ${build} -->
     <javac debug="true" srcdir="${src-test}" destdir="${build-test}" classpathref="test.classpath"

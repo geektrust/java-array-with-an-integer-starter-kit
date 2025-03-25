@@ -1,0 +1,23 @@
+{
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    ".theia": true,
+    ".gitignore": true,
+    ".gtignore": true,
+    "run.sh": true,
+    "run_unittests.sh": true,
+    "LICENSE": true,
+    "build.xml": true,
+    "build":true,
+    "dist":true,
+    "README.md":true,
+    "Main.java":true
+  }
+}

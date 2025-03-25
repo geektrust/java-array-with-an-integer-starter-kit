@@ -1,15 +1,6 @@
 import java.util.Arrays;
 
-
-
 public class Main {
-
-    /* Implement your solution inside this method. */
-    public int[] handle(int[] nums, int target) {
-        // WRITE YOUR CODE HERE.
-        return nums;
-    }
-
     /*
      ***********************************************
      * This is the driver code. Don't change it!!!
@@ -20,7 +11,6 @@ public class Main {
             processArgs(arg);
         }
     }
-
     /*
      * This method parses each input and assigns it to different variables.
      * The value of the function parameter "input" will be in the format 
@@ -33,11 +23,7 @@ public class Main {
         int[] nums = Arrays.stream(numStrs)
                            .mapToInt(Integer::parseInt)
                            .toArray();
-
-
-        int[] output = new Main().handle(nums, target);
+        int[] output = new Solution().handle(nums, target);
         System.out.println(Arrays.toString(output));
     }
-
-
 }

@@ -5,3 +5,4 @@ build.xml
 run.sh
 run_unittests.sh
 LICENSE
+.theia/
